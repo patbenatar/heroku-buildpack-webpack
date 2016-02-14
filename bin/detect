@@ -1,6 +1,7 @@
 #!/bin/sh
 
-if [ -f "$1/config/webpack.config.js" ]; then
+if grep -q "webpack-rails" $1/Gemfile.lock
+then
   echo "Webpack"
   exit 0
 else
